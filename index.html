@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadaf Zehra</title>
-  <meta name="description" content="Sadaf Zehra: Computer Science Instructor at FAST-NUCES, MS Data Science (NED University). Research in few-shot generative modeling, vision-language learning and computer vision.">
+  <meta name="description" content="Sadaf Zehra: Computer Science Instructor at FAST-NUCES, MS Data Science (NED University). Research in few-shot generative modeling, vision-language learning, computer vision, and language models for program comprehension.">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 8px 20px;
     }
 
     .main-menu li {
@@ -50,6 +50,12 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
+      padding: 4px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-menu a.current {
+      border-bottom-color: white;
     }
 
     #container {
@@ -60,7 +66,7 @@
       display: none;
       max-width: 900px;
       background: white;
-      padding: 20px;
+      padding: 20px 24px;
       margin: 10px auto;
       border-radius: 8px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -81,28 +87,6 @@
 
     footer p {
       margin: 0;
-    }
-
-    .floating-update {
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #007BFF;
-      color: white;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      animation: slide-in 2s ease-in-out;
-      max-width: 220px;
-    }
-
-    .floating-update p {
-      margin: 4px 0;
-    }
-
-    @keyframes slide-in {
-      from { transform: translateX(100%); }
-      to { transform: translateX(0); }
     }
 
     a {
@@ -129,6 +113,10 @@
       margin-left: 10px;
     }
 
+    h2 {
+      color: #003d80;
+    }
+
     h3 {
       color: #0056b3;
       border-bottom: 2px solid #e3eefb;
@@ -136,7 +124,140 @@
       margin-top: 28px;
     }
 
-    /* Work experience cards (same look as the reference site) */
+    .section-intro {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Home page */
+    .intro {
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+
+    .update-box {
+      background-color: #eef5ff;
+      border-left: 4px solid #007BFF;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 18px 0;
+    }
+
+    .update-box p {
+      margin: 4px 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 10px 0 0;
+      list-style: none;
+    }
+
+    .chips li {
+      background-color: #e3eefb;
+      color: #003d80;
+      border-radius: 16px;
+      padding: 6px 12px;
+      font-size: 0.9em;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .stat {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5em;
+      color: #0056b3;
+    }
+
+    .stat span {
+      font-size: 0.88em;
+      color: #555;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      padding: 14px 16px;
+      line-height: 1.5;
+    }
+
+    .card h4 {
+      margin: 0 0 6px;
+      color: #003d80;
+      font-size: 1em;
+    }
+
+    .card p {
+      margin: 0 0 8px;
+      font-size: 0.92em;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: #0056b3;
+      background-color: #e3eefb;
+      border-radius: 10px;
+      padding: 2px 8px;
+      margin-bottom: 8px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.92em;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+      text-decoration: none;
+    }
+
+    .button.light {
+      background-color: #e3eefb;
+      color: #003d80;
+    }
+
+    .button.light:hover {
+      background-color: #cfe2f8;
+    }
+
+    /* Work experience cards */
     .jobs {
       list-style: none;
       padding: 0;
@@ -190,12 +311,6 @@
     }
 
     @media (max-width: 700px) {
-      .floating-update {
-        position: static;
-        margin: 10px 0;
-        max-width: none;
-        animation: none;
-      }
       .date {
         float: none;
         display: block;
@@ -211,6 +326,12 @@
       #container {
         padding: 10px;
       }
+      .content-region {
+        padding: 16px;
+      }
+      .main-menu {
+        gap: 6px 14px;
+      }
     }
   </style>
 </head>
@@ -220,11 +341,15 @@
     <h1>Sadaf Zehra</h1>
     <p class="tagline">Instructor, Computer Science, FAST-NUCES &nbsp;|&nbsp; MS Data Science, NED University</p>
     <ul class="main-menu">
-      <li><a href="#home" onclick="showContent('home')">Home</a></li>
-      <li><a href="#about" onclick="showContent('about')">About</a></li>
-      <li><a href="#work" onclick="showContent('work')">Work Experience</a></li>
+      <li><a href="#home" data-section="home">Home</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#research" data-section="research">Research Projects</a></li>
+      <li><a href="#publications" data-section="publications">Publications</a></li>
+      <li><a href="#work" data-section="work">Work Experience</a></li>
+      <li><a href="#education" data-section="education">Education</a></li>
+      <li><a href="#certifications" data-section="certifications">Certifications</a></li>
       <li><a href="Sadaf_Zehra_CV.pdf" download>CV</a></li>
-      <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
+      <li><a href="#contact" data-section="contact">Contact</a></li>
     </ul>
   </header>
 
@@ -233,29 +358,124 @@
 
       <!-- Home Section -->
       <div id="home" class="content-region active">
-        <h2>Home</h2>
-        <p>Welcome to my professional website. Here you can find updates about my work, research, publications, certifications, and more!</p>
+        <h2>Welcome</h2>
+        <p class="intro">
+          I am a Computer Science Instructor at FAST-NUCES Karachi and Visiting Faculty at Bahria University. I hold an MS in Data Science from NED University (CGPA 3.81/4.00). My research is about learning from very few examples: generating new handwriting styles from five images, guiding recognition with language, and, more recently, building AI assistants that adapt to how each programmer reads and understands code.
+        </p>
 
-        <div>
-          <h3>Updates</h3>
-          <div class="floating-update">
-            <p><strong>Latest Update:</strong></p>
-            <p>Applying for PhD positions for Fall 2027.</p>
+        <div class="update-box">
+          <p><strong>Latest update:</strong> Applying for PhD positions for Fall 2027.</p>
+          <p><strong>New:</strong> Four research projects on language models and program comprehension (GLANCE, STALE, TAILOR, Beyond English Identifiers). See <a href="#research" data-section="research">Research Projects</a>.</p>
+        </div>
+
+        <h3>Research Interests</h3>
+        <ul class="chips">
+          <li>Few-Shot &amp; Zero-Shot Generative Learning</li>
+          <li>Vision-Language &amp; Multimodal Learning</li>
+          <li>Deep Generative Models</li>
+          <li>Computer Vision</li>
+          <li>Explainable AI</li>
+          <li>Language Models &amp; Program Comprehension</li>
+        </ul>
+
+        <h3>At a Glance</h3>
+        <div class="stats">
+          <div class="stat"><strong>3.81</strong><span>MS CGPA (NED University)</span></div>
+          <div class="stat"><strong>1</strong><span>IEEE conference paper, presented at FET'26</span></div>
+          <div class="stat"><strong>15+</strong><span>research and industry projects with code on GitHub</span></div>
+          <div class="stat"><strong>4</strong><span>institutions where I have taught</span></div>
+        </div>
+
+        <h3>Featured Work</h3>
+        <div class="cards">
+          <div class="card">
+            <span class="tag">MS Thesis</span>
+            <h4>Few-Shot Font Generation with a Conditional VAE</h4>
+            <p>Writes characters in a new handwriting style from five examples, on alphabets never seen in training (SSIM 0.782, FID 12.21).</p>
+            <a href="https://github.com/SadafZehra/Few_Shot_Font_Generation_Using_Conditional_Variational_Autoencoder" target="_blank">Code</a>
+          </div>
+          <div class="card">
+            <span class="tag">Diffusion</span>
+            <h4>LangFont</h4>
+            <p>Few-shot font generation guided by text, with Stable Diffusion and LoRA. Cut FID from 184.6 to 54.1 against a CVAE baseline.</p>
+            <a href="https://github.com/SadafZehra/LangFont_FewShot_Font_Generation" target="_blank">Code</a>
+          </div>
+          <div class="card">
+            <span class="tag">Vision-Language</span>
+            <h4>When Examples Mislead</h4>
+            <p>In-context examples raised object hallucination in Qwen2-VL-2B from 4.0% to 26.2% on POPE.</p>
+            <a href="https://github.com/SadafZehra/VLM_FewShot_POPE_Hallucination" target="_blank">Code</a>
+          </div>
+          <div class="card">
+            <span class="tag">LLMs &amp; Code</span>
+            <h4>Beyond English Identifiers</h4>
+            <p>How English variable names burden non-native programmers. A small LLM asked for Roman Urdu explanations wrote Roman Urdu in only 1 of 16 cases.</p>
+            <a href="https://github.com/SadafZehra/Beyond-English-Identifiers-Modelling-the-Second-Language-Cost-of-Program-Comprehension" target="_blank">Code</a>
           </div>
         </div>
 
-        <h3>Publications</h3>
+        <div class="quick-links">
+          <a class="button" href="#research" data-section="research">All research projects</a>
+          <a class="button light" href="Sadaf_Zehra_CV.pdf" download>Download CV</a>
+          <a class="button light" href="#contact" data-section="contact">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div id="about" class="content-region">
+        <h2>About</h2>
+        <p>
+          Sadaf Zehra is currently working as an Instructor of Computer Science at FAST - National University of Computer and Emerging Sciences (FAST-NUCES), Karachi, and as Visiting Faculty at Bahria University. With a passion for generative AI and computer vision, she completed an MS in Data Science from NED University of Engineering and Technology with a CGPA of 3.81/4.00, where she received a merit-based scholarship. Her MS thesis, supervised by Dr. Muhammad Umer Farooq, focused on few-shot font generation with a conditional variational autoencoder. She has also co-authored a paper published by IEEE at FET'26, which she presented herself.
+        </p>
+        <p>
+          Alongside her studies, she has worked as a Computer Vision Intern at The Disrupt Labs, where she built real-time smoke and package detection models for factory cameras, and as a ServiceNow Developer at Faralone Enterprises and Consultant. She has taught at the University of Karachi and the Aawaz Institute of Media &amp; Management Sciences, and coached intermediate students for nearly three years. At FAST-NUCES she writes her own lab manuals, supervises student projects and serves on Final Year Project evaluation juries. These experiences have strengthened her teaching, communication and research skills, as well as her ability to explain complex ideas to different audiences.
+        </p>
+        <p>
+          Her research interests include few-shot and zero-shot generative learning, vision-language and multimodal learning, deep generative models, computer vision and explainable AI. Teaching programming every day has also led her to a newer question: how language models can adapt to the way each programmer reads and understands code, including students who learn programming in a second language. Beyond her academic and professional pursuits, she is an ardent writer and painter with a keen eye for aesthetics. She enjoys exploring topics related to psychology, comparative religion and theology, and is always eager to seize new opportunities and embrace fresh challenges with enthusiasm and curiosity.
+        </p>
+      </div>
+
+      <!-- Research Projects Section -->
+      <div id="research" class="content-region">
+        <h2>Research Projects</h2>
+        <p class="section-intro">Projects are grouped by theme. Each one links to its code on GitHub.</p>
+
+        <h3>Language Models and Program Comprehension</h3>
         <ul class="projects">
           <li>
-            M. Khanum, H. Ali, <strong>S. Zehra</strong>, S. Rajput, and Q. Mahmood, "Performance Analysis of Machine Learning Algorithms for Air Quality Index (AQI) Estimation," in <em>Proc. International Conference of Frontiers of Engineering and Emerging Technologies (FET'26)</em>, IEEE, 2026.
-            DOI: <a href="https://doi.org/10.1109/FET68771.2026.11601421" target="_blank">10.1109/FET68771.2026.11601421</a><br>
-            <strong>Mentor:</strong> Prof. Dr. Haider Ali, Department of Mechanical Engineering, NED University of Engineering and Technology<br><br>
+            <strong>Project Title:</strong> GLANCE: Gaze-Driven Learner Profiling for Adaptive Pragmatic Code Explanations <span class="date">(2026)</span><br><br>
             <strong>Description:</strong><br>
-            Predicted the Air Quality Index from six pollutants (PM2.5, PM10, NO, SO<sub>2</sub>, CO, O<sub>3</sub>) with Decision Tree, Random Forest and XGBoost, using forward feature selection on OpenAQ data from four cities in the USA, Austria, Spain and the UK (2019 to 2024). I presented the paper at the conference (University of Bahrain, online, 22 to 23 April 2026).
+            Aligned the eye-tracking fixations of 154 programmers reading Java code (EMIP dataset) to code tokens and tested whether surprisal from code language models (Qwen2.5-Coder 0.5B and 1.5B) predicts how long different groups of readers look at each token, using held-out log-likelihood per participant. Profiled unseen developers from only 1, 3 or 5 short gaze windows with few-shot prototypes and a learned NCA metric, and explained each decision with coefficients, permutation importance and decision rules. The profile then drives a Rational Speech Acts speaker that chooses among LLM code explanations by trading informativity against a gaze-fitted reading cost, with retrieval grounding and checks for hallucinated identifiers.<br>
+            <strong>Tools:</strong> Python, PyTorch, Hugging Face Transformers, Qwen2.5-Coder, EMIP Eye-Tracking Data, scikit-learn, Rational Speech Acts<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/GLANCE-Gaze-driven-Learner-profiling-for-Adaptive-pragmatic-Code-Explanations" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> STALE: Stale-Value Tracing in Artificial and Learner Environments <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Built a benchmark of 400 generated Python programs that vary the number of variables (2 to 5), how often the queried variable is re-assigned (0 to 4) and the kind of re-assignment (augmented, swap, loop), with answers verified by execution and every error labelled as a stale value, another variable's value, or other. Tested code LLMs with 0, 2 and 4 demonstrations (exact McNemar tests) and located where variable values are stored inside the model with layer-wise probes and activation patching. Modelled tracing errors with an ACT-R style working-memory model, estimated a learner's memory capacity from a few answers with a Bayesian posterior, and compared personalised and fixed hint policies in simulation.<br>
+            <strong>Tools:</strong> Python, PyTorch, Hugging Face Transformers, Qwen2.5-Coder, Linear Probes, Activation Patching, ACT-R<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/STALE-Stale-value-Tracing-in-Artificial-and-Learner-Environments" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> TAILOR: Taste-Aware Interpretable Learning of Reader Preferences <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Generated 192 code explanations (24 Python functions in a 2&times;2&times;2 design of detail, example and confidence) and described each with nine interpretable features, including readability measured as surprisal under a reader language model. Trained a sparse mixture-of-experts reward model (L1 Bradley-Terry experts fitted with EM) on simulated developer preferences, and measured how well it recovers hidden developer types, how quickly it adapts to a new developer from 1 to 16 comparisons, and how faithful contribution-contrast explanations are compared with routing weights.<br>
+            <strong>Tools:</strong> Python, PyTorch, Hugging Face Transformers, Qwen2.5-Coder, scikit-learn, Mixture of Experts, EM<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/TAILOR-Taste-Aware-Interpretable-Learning-Of-Reader-preferences" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> Beyond English Identifiers: Modelling the Second-Language Cost of Program Comprehension <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Renamed the identifiers of 20 Python functions in four styles (English, abbreviated, Roman Urdu, neutral), verified all 80 variants by execution, and scored how familiar each identifier word is to an English-centred and a multilingual language model (r = 0.87). Generated code explanations in English, Roman Urdu and Urdu script and checked them with back-translation: the model wrote Roman Urdu in only 1 of 16 cases, a gap for a language variety that millions of programming students use. On simulated classroom data, a short vocabulary test plus a few quiz answers chose the best explanation language for 86% of students.<br>
+            <strong>Tools:</strong> Python, PyTorch, Hugging Face Transformers, Qwen2.5, SmolLM2, scikit-learn, Bayesian Inference<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Beyond-English-Identifiers-Modelling-the-Second-Language-Cost-of-Program-Comprehension" target="_blank">GitHub</a>
           </li>
         </ul>
 
-        <h3>Research Projects</h3>
+        <h3>Few-Shot and Generative Learning</h3>
         <ul class="projects">
           <li>
             <strong>Project Title:</strong> MS Thesis: Few-Shot Font Generation Using Conditional Variational Autoencoder <span class="date">(Aug 2025 - Jun 2026)</span><br>
@@ -275,6 +495,41 @@
           </li>
 
           <li>
+            <strong>Project Title:</strong> Beyond the Mean Prototype: Multi-Modal Class Representations for Few-Shot Learning <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Improved Prototypical Networks by giving each class several prototypes (found with soft k-means) instead of one average, so classes with more than one style are described better. Tested on 600 tasks per setting (5/20-way, 1/5-shot) on normal and mixed-style Omniglot. Beat Prototypical Networks in all four 5-shot settings, with every gain confirmed by 95% confidence intervals (best: 92.24% vs 91.77% on mixed-style 20-way 5-shot), and matched it in 1-shot as expected.<br>
+            <strong>Tools:</strong> Python, PyTorch, Prototypical Networks, Soft k-Means, Meta-Learning, Omniglot<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Beyond-the-Mean-Prototype-Multi-Modal-Classes-in-Meta-Learning" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> SCACM: Semantic Clustered Attention Conditioning for Few-Shot Generation on Unseen Alphabets <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Built a controlled test on unseen Omniglot alphabets comparing three ways to condition a few-shot conditional VAE: averaging, attention and clustered attention (SCACM). Clustered attention matched but did not beat averaging (IWAE NLL 105.68 vs 105.58 nats), which I traced to the low variation inside Omniglot classes.<br>
+            <strong>Tools:</strong> Python, PyTorch, Conditional VAE, Attention, IWAE, Omniglot<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/SCACM-Semantic-Clustered-Attention-Conditioning-for-Few-Shot-Generation-on-Unseen-Alphabets" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> Safe Over Short: Learning to Trace Unseen Characters with Reinforcement Learning <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Turned handwriting tracing on Omniglot into a reinforcement learning task where the pen slips 5% of the time (1,852 training tasks and 500 test tasks from unseen alphabets), and implemented ten RL methods from scratch: dynamic programming, two Monte Carlo methods, Sarsa, Q-learning, Dyna-Q, DQN, REINFORCE, A2C and PPO. Showed that planning for slips beats the shortest path on unseen alphabets (95.0% vs 75.4% success); Sarsa, Q-learning and Dyna-Q reached about 93% success, close to the optimal 94.1%. Found the deep RL agents cheating the reward (ending episodes early) and fixed it with potential-based reward shaping.<br>
+            <strong>Tools:</strong> Python, PyTorch, NumPy, Dynamic Programming, Q-Learning, DQN, PPO, Reward Shaping<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Safe-Over-Short-Learning-to-Trace-Unseen-Characters-with-Reinforcement-Learning" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> Controllable Text-to-Image Generation with Stable Diffusion and CLIP-Based Evaluation <span class="date">(2025)</span><br><br>
+            <strong>Description:</strong><br>
+            Built a Stable Diffusion pipeline and measured prompt fidelity with CLIP score across sampling steps, guidance scale, image size and negative prompts. The score levelled off after 25 steps, peaked at guidance 7.5, and dropped for portrait images (28.62 to 25.66) and with negative prompts (28.51 to 27.26).<br>
+            <strong>Tools:</strong> Python, PyTorch, Hugging Face Diffusers, Stable Diffusion, CLIP<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Controllable-Text-to-Image-Generation-with-Stable-Diffusion-and-CLIP-Based-Evaluation" target="_blank">GitHub</a>
+          </li>
+        </ul>
+
+        <h3>Vision-Language, Computer Vision and Multimodal Learning</h3>
+        <ul class="projects">
+          <li>
             <strong>Project Title:</strong> Seeing with Words: Language-Guided Prototypes for One-Shot Recognition <span class="date">(2026)</span><br><br>
             <strong>Description:</strong><br>
             Combined CLIP image prototypes with class text descriptions (CUB bird attributes and WordNet definitions) and compared eleven methods, including zero-shot text, image-text fusion, linear probes and a learned shot-aware gate, on 600 fixed 5-way episodes with 95% confidence intervals. Adding text raised 1-shot accuracy from 81.7% to 96.1% on CUB-200 (+14.3 points) and from 88.3% to 99.0% on mini-ImageNet (+10.7), while the gain shrank to about +2 points at 5-shot; all gains were significant on paired episodes. The learned gate shifted weight to text when examples were scarce (83% at 1-shot vs 60% at 5-shot on CUB), but simple validation-tuned fusion stayed best, and long descriptions gave no gain over class names.<br>
@@ -288,38 +543,6 @@
             Tested whether 0, 1, 3 or 5 in-context examples reduce object hallucination in two small vision-language models (Qwen2-VL-2B and SmolVLM, 4-bit) on 900 balanced POPE questions, scoring yes/no token probabilities and reporting F1, hallucination rate, AUROC, bootstrap 95% confidence intervals and McNemar tests. The examples made the models worse: for Qwen2-VL-2B, F1 fell from 0.832 to 0.761 and the hallucination rate rose from 4.0% to 26.2% at 5-shot (significant on the popular and adversarial splits), while SmolVLM became over-cautious (recall 0.64 to 0.53).<br>
             <strong>Tools:</strong> Python, PyTorch, Hugging Face Transformers, Qwen2-VL-2B, SmolVLM, 4-bit Quantization, POPE<br>
             <strong>Code:</strong> <a href="https://github.com/SadafZehra/VLM_FewShot_POPE_Hallucination" target="_blank">GitHub</a>
-          </li>
-
-          <li>
-            <strong>Project Title:</strong> Systematic Review: Explainable Machine Learning for Distributed Big Data Systems <span class="date">(Jan - Jun 2026)</span><br>
-            <strong>Mentor:</strong> Dr. Muhammad Umer Farooq, Department of Computer Science and Information Technology, NED University of Engineering and Technology<br><br>
-            <strong>Description:</strong><br>
-            Reviewed 32 peer-reviewed studies (2020 to 2025) on explainable machine learning in distributed big-data systems using the PRISMA method and six quality criteria (QA1 to QA6), and built a taxonomy linking ML models, XAI techniques and platforms (Apache Spark, Hadoop, Kubernetes, federated learning). Found that SHAP was the most used XAI method (19 of 32 studies) while only 6 of 32 studies measured explanation quality (fidelity, stability, coherence), a key research gap.<br>
-            <strong>Tools:</strong> PRISMA, Systematic Literature Review, Explainable AI (SHAP, LIME), LaTeX
-          </li>
-
-          <li>
-            <strong>Project Title:</strong> Beyond the Mean Prototype: Multi-Modal Class Representations for Few-Shot Learning <span class="date">(2026)</span><br><br>
-            <strong>Description:</strong><br>
-            Improved Prototypical Networks by giving each class several prototypes (found with soft k-means) instead of one average, so classes with more than one style are described better. Tested on 600 tasks per setting (5/20-way, 1/5-shot) on normal and mixed-style Omniglot. Beat Prototypical Networks in all four 5-shot settings, with every gain confirmed by 95% confidence intervals (best: 92.24% vs 91.77% on mixed-style 20-way 5-shot), and matched it in 1-shot as expected.<br>
-            <strong>Tools:</strong> Python, PyTorch, Prototypical Networks, Soft k-Means, Meta-Learning, Omniglot<br>
-            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Beyond-the-Mean-Prototype-Multi-Modal-Classes-in-Meta-Learning" target="_blank">GitHub</a>
-          </li>
-
-          <li>
-            <strong>Project Title:</strong> Safe Over Short: Learning to Trace Unseen Characters with Reinforcement Learning <span class="date">(2026)</span><br><br>
-            <strong>Description:</strong><br>
-            Turned handwriting tracing on Omniglot into a reinforcement learning task where the pen slips 5% of the time (1,852 training tasks and 500 test tasks from unseen alphabets), and implemented ten RL methods from scratch: dynamic programming, two Monte Carlo methods, Sarsa, Q-learning, Dyna-Q, DQN, REINFORCE, A2C and PPO. Showed that planning for slips beats the shortest path on unseen alphabets (95.0% vs 75.4% success); Sarsa, Q-learning and Dyna-Q reached about 93% success, close to the optimal 94.1%. Found the deep RL agents cheating the reward (ending episodes early) and fixed it with potential-based reward shaping.<br>
-            <strong>Tools:</strong> Python, PyTorch, NumPy, Dynamic Programming, Q-Learning, DQN, PPO, Reward Shaping<br>
-            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Safe-Over-Short-Learning-to-Trace-Unseen-Characters-with-Reinforcement-Learning" target="_blank">GitHub</a>
-          </li>
-
-          <li>
-            <strong>Project Title:</strong> SCACM: Semantic Clustered Attention Conditioning for Few-Shot Generation on Unseen Alphabets <span class="date">(2026)</span><br><br>
-            <strong>Description:</strong><br>
-            Built a controlled test on unseen Omniglot alphabets comparing three ways to condition a few-shot conditional VAE: averaging, attention and clustered attention (SCACM). Clustered attention matched but did not beat averaging (IWAE NLL 105.68 vs 105.58 nats), which I traced to the low variation inside Omniglot classes.<br>
-            <strong>Tools:</strong> Python, PyTorch, Conditional VAE, Attention, IWAE, Omniglot<br>
-            <strong>Code:</strong> <a href="https://github.com/SadafZehra/SCACM-Semantic-Clustered-Attention-Conditioning-for-Few-Shot-Generation-on-Unseen-Alphabets" target="_blank">GitHub</a>
           </li>
 
           <li>
@@ -340,20 +563,23 @@
           </li>
 
           <li>
-            <strong>Project Title:</strong> Controllable Text-to-Image Generation with Stable Diffusion and CLIP-Based Evaluation <span class="date">(2025)</span><br><br>
-            <strong>Description:</strong><br>
-            Built a Stable Diffusion pipeline and measured prompt fidelity with CLIP score across sampling steps, guidance scale, image size and negative prompts. The score levelled off after 25 steps, peaked at guidance 7.5, and dropped for portrait images (28.62 to 25.66) and with negative prompts (28.51 to 27.26).<br>
-            <strong>Tools:</strong> Python, PyTorch, Hugging Face Diffusers, Stable Diffusion, CLIP<br>
-            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Controllable-Text-to-Image-Generation-with-Stable-Diffusion-and-CLIP-Based-Evaluation" target="_blank">GitHub</a>
-          </li>
-
-          <li>
             <strong>Project Title:</strong> LungCare: Chest X-Ray Lung Damage Assessment System (BS Final Year Project) <span class="date">(2021)</span><br>
             <strong>Mentor:</strong> Miss Maryam Feroz, Lecturer, Department of Computer Science, University of Karachi<br><br>
             <strong>Description:</strong><br>
             Built a web app (React, Flask, Firebase) that takes a chest X-ray and reports how badly the lungs are damaged, using real X-rays of COVID-19, tuberculosis and pneumonia patients from a hospital. Designed the image analysis (lung-area masking and pixel-intensity analysis) with a medical doctor, who validated the results. Presented the project at the codeBIT FYP Symposium, University of Karachi (March 2022).<br>
             <strong>Tools:</strong> Python, OpenCV, Flask, React, Firebase<br>
             <strong>Code:</strong> <a href="https://github.com/SadafZehra/MyFYPWebApp" target="_blank">GitHub</a>
+          </li>
+        </ul>
+
+        <h3>Explainable AI</h3>
+        <ul class="projects">
+          <li>
+            <strong>Project Title:</strong> Systematic Review: Explainable Machine Learning for Distributed Big Data Systems <span class="date">(Jan - Jun 2026)</span><br>
+            <strong>Mentor:</strong> Dr. Muhammad Umer Farooq, Department of Computer Science and Information Technology, NED University of Engineering and Technology<br><br>
+            <strong>Description:</strong><br>
+            Reviewed 32 peer-reviewed studies (2020 to 2025) on explainable machine learning in distributed big-data systems using the PRISMA method and six quality criteria (QA1 to QA6), and built a taxonomy linking ML models, XAI techniques and platforms (Apache Spark, Hadoop, Kubernetes, federated learning). Found that SHAP was the most used XAI method (19 of 32 studies) while only 6 of 32 studies measured explanation quality (fidelity, stability, coherence), a key research gap.<br>
+            <strong>Tools:</strong> PRISMA, Systematic Literature Review, Explainable AI (SHAP, LIME), LaTeX
           </li>
         </ul>
 
@@ -377,81 +603,20 @@
             <strong>Code:</strong> <a href="https://github.com/SadafZehra/BoxDetection" target="_blank">GitHub</a>
           </li>
         </ul>
-
-        <h3>Certifications</h3>
-        <ul>
-          <li>Certified Artificial Intelligence Developer - Presidential Initiative for Artificial Intelligence and Computing (PIAIC), Jan 2023</li>
-          <li>ServiceNow Certified System Administrator - ServiceNow, Jun 2022</li>
-          <li>IELTS Academic, overall band 6.5 - Aug 2026</li>
-        </ul>
-
-        <h3>Online Courses Completed</h3>
-        <ul>
-          <li><a href="https://www.edx.org/learn/computer-science/rwth-aachen-university-reinforcement-learning-2" target="_blank">Reinforcement Learning - RWTH Aachen University (edX)</a></li>
-          <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8" target="_blank">CS236: Deep Generative Models - Stanford University</a></li>
-          <li><a href="https://www.youtube.com/watch?v=dYmJd_fJLW0&amp;list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36" target="_blank">CS330: Deep Multi-Task and Meta Learning - Stanford University</a></li>
-          <li><a href="https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r" target="_blank">EECS 498-007: Deep Learning for Computer Vision - University of Michigan</a></li>
-          <li><a href="https://youtu.be/oXlwWbU8l2o" target="_blank">OpenCV Course: Full Tutorial with Python - freeCodeCamp</a></li>
-        </ul>
-
-        <h3>Courses List</h3>
-        <p><strong>MS Data Science - NED University of Engineering and Technology</strong></p>
-        <ul>
-          <li>Generative Artificial Intelligence (CT-5013) - NED University</li>
-          <li>Machine Learning (CT-562) - NED University</li>
-          <li>Natural Language Processing (CT-561) - NED University</li>
-          <li>Statistics &amp; Probability for Data Science (CT-581) - NED University</li>
-          <li>Data Mining (CT-530) - NED University</li>
-          <li>Big Data Analytics (CT-592) - NED University</li>
-          <li>Data Visualization (CT-590) - NED University</li>
-          <li>Tools and Techniques for Data Science (CT-583) - NED University</li>
-          <li>Thesis (CT-5002) - NED University</li>
-        </ul>
-        <p><strong>BS Software Engineering - University of Karachi</strong></p>
-        <ul>
-          <li>Calculus &amp; Analytical Geometry I (301SE) - University of Karachi</li>
-          <li>Calculus &amp; Analytical Geometry II (306SE) - University of Karachi</li>
-          <li>Linear Algebra (308SE) - University of Karachi</li>
-          <li>Ordinary Differential Equations (411SE) - University of Karachi</li>
-          <li>Probability &amp; Statistics (417SE) - University of Karachi</li>
-          <li>Discrete Mathematics (412SE) - University of Karachi</li>
-          <li>Numerical Analysis (511SE) - University of Karachi</li>
-          <li>Operation Research (602SE) - University of Karachi</li>
-          <li>Data Structures (405SE) - University of Karachi</li>
-          <li>Automata Theory (413SE) - University of Karachi</li>
-          <li>Compiler Construction (501SE) - University of Karachi</li>
-          <li>AI in Software Engineering (509SE) - University of Karachi</li>
-          <li>Data Warehousing and Data Mining (514SE) - University of Karachi</li>
-          <li>Distributed Computing (601SE) - University of Karachi</li>
-        </ul>
-
-        <h3>Academic Details</h3>
-        <ul>
-          <li><strong>Master's Degree:</strong> MS in Data Science, NED University of Engineering and Technology, Karachi (Aug 2024 - Jun 2026), CGPA 3.81/4.00</li>
-          <li><strong>Bachelor's Degree:</strong> BS in Software Engineering, University of Karachi (2018 - 2021), CGPA 3.53/4.00</li>
-          <li><strong>Key Achievements:</strong>
-            <ul>
-              <li>Received a merit-based scholarship from NED University for three semesters of the MS in Data Science.</li>
-              <li>Ranked among the top 20 Computer Science students in Karachi in intermediate (Sir Syed Government Girls College) and received a cash prize from the Prime Minister of Pakistan.</li>
-              <li>Presented a research paper at the IEEE conference FET'26 (University of Bahrain, online), April 2026.</li>
-              <li>Presented my BS final year project at the codeBIT FYP Symposium, University of Karachi, March 2022.</li>
-            </ul>
-          </li>
-        </ul>
       </div>
 
-      <!-- About Section -->
-      <div id="about" class="content-region">
-        <h2>About</h2>
-        <p>
-          Sadaf Zehra is currently working as an Instructor of Computer Science at FAST - National University of Computer and Emerging Sciences (FAST-NUCES), Karachi, and as Visiting Faculty at Bahria University. With a passion for generative AI and computer vision, she completed an MS in Data Science from NED University of Engineering and Technology with a CGPA of 3.81/4.00, where she received a merit-based scholarship. Her MS thesis, supervised by Dr. Muhammad Umer Farooq, focused on few-shot font generation with a conditional variational autoencoder. She has also co-authored a paper published by IEEE at FET'26, which she presented herself.
-        </p>
-        <p>
-          Alongside her studies, she has worked as a Computer Vision Intern at The Disrupt Labs, where she built real-time smoke and package detection models for factory cameras, and as a ServiceNow Developer at Faralone Enterprises and Consultant. She has taught at the University of Karachi and the Aawaz Institute of Media &amp; Management Sciences, and coached intermediate students for nearly three years. At FAST-NUCES she writes her own lab manuals, supervises student projects and serves on Final Year Project evaluation juries. These experiences have strengthened her teaching, communication and research skills, as well as her ability to explain complex ideas to different audiences.
-        </p>
-        <p>
-          Her research interests include few-shot and zero-shot generative learning, vision-language and multimodal learning, deep generative models, computer vision and explainable AI. Beyond her academic and professional pursuits, she is an ardent writer and painter with a keen eye for aesthetics. She enjoys exploring topics related to psychology, comparative religion and theology, and is always eager to seize new opportunities and embrace fresh challenges with enthusiasm and curiosity.
-        </p>
+      <!-- Publications Section -->
+      <div id="publications" class="content-region">
+        <h2>Publications</h2>
+        <ul class="projects">
+          <li>
+            M. Khanum, H. Ali, <strong>S. Zehra</strong>, S. Rajput, and Q. Mahmood, "Performance Analysis of Machine Learning Algorithms for Air Quality Index (AQI) Estimation," in <em>Proc. International Conference of Frontiers of Engineering and Emerging Technologies (FET'26)</em>, IEEE, 2026.
+            DOI: <a href="https://doi.org/10.1109/FET68771.2026.11601421" target="_blank">10.1109/FET68771.2026.11601421</a><br>
+            <strong>Mentor:</strong> Prof. Dr. Haider Ali, Department of Mechanical Engineering, NED University of Engineering and Technology<br><br>
+            <strong>Description:</strong><br>
+            Predicted the Air Quality Index from six pollutants (PM2.5, PM10, NO, SO<sub>2</sub>, CO, O<sub>3</sub>) with Decision Tree, Random Forest and XGBoost, using forward feature selection on OpenAQ data from four cities in the USA, Austria, Spain and the UK (2019 to 2024). I presented the paper at the conference (University of Bahrain, online, 22 to 23 April 2026).
+          </li>
+        </ul>
       </div>
 
       <!-- Work Experience -->
@@ -532,9 +697,78 @@
             </div>
             <p class="org">The Disrupt Labs</p>
             <div class="description">
-              <p>Built real-time computer vision models (about 15 ms per image on GPU) for industrial use on factory camera images. Worked on Smoke Detection (EfficientNetB2, YOLOv5), Package Detection (YOLOv4-tiny), Vehicle Classification and QR Code Recognition. Details of the smoke and package detection projects are on the Home page under Professional Projects.</p>
+              <p>Built real-time computer vision models (about 15 ms per image on GPU) for industrial use on factory camera images. Worked on Smoke Detection (EfficientNetB2, YOLOv5), Package Detection (YOLOv4-tiny), Vehicle Classification and QR Code Recognition. Details of the smoke and package detection projects are under <a href="#research" data-section="research">Research Projects</a>, in Professional Projects.</p>
             </div>
           </li>
+        </ul>
+      </div>
+
+      <!-- Education Section -->
+      <div id="education" class="content-region">
+        <h2>Education</h2>
+        <h3>Academic Details</h3>
+        <ul>
+          <li><strong>Master's Degree:</strong> MS in Data Science, NED University of Engineering and Technology, Karachi (Aug 2024 - Jun 2026), CGPA 3.81/4.00</li>
+          <li><strong>Bachelor's Degree:</strong> BS in Software Engineering, University of Karachi (2018 - 2021), CGPA 3.53/4.00</li>
+          <li><strong>Key Achievements:</strong>
+            <ul>
+              <li>Received a merit-based scholarship from NED University for three semesters of the MS in Data Science.</li>
+              <li>Ranked among the top 20 Computer Science students in Karachi in intermediate (Sir Syed Government Girls College) and received a cash prize from the Prime Minister of Pakistan.</li>
+              <li>Presented a research paper at the IEEE conference FET'26 (University of Bahrain, online), April 2026.</li>
+              <li>Presented my BS final year project at the codeBIT FYP Symposium, University of Karachi, March 2022.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Courses List</h3>
+        <p><strong>MS Data Science - NED University of Engineering and Technology</strong></p>
+        <ul>
+          <li>Generative Artificial Intelligence (CT-5013) - NED University</li>
+          <li>Machine Learning (CT-562) - NED University</li>
+          <li>Natural Language Processing (CT-561) - NED University</li>
+          <li>Statistics &amp; Probability for Data Science (CT-581) - NED University</li>
+          <li>Data Mining (CT-530) - NED University</li>
+          <li>Big Data Analytics (CT-592) - NED University</li>
+          <li>Data Visualization (CT-590) - NED University</li>
+          <li>Tools and Techniques for Data Science (CT-583) - NED University</li>
+          <li>Thesis (CT-5002) - NED University</li>
+        </ul>
+        <p><strong>BS Software Engineering - University of Karachi</strong></p>
+        <ul>
+          <li>Calculus &amp; Analytical Geometry I (301SE) - University of Karachi</li>
+          <li>Calculus &amp; Analytical Geometry II (306SE) - University of Karachi</li>
+          <li>Linear Algebra (308SE) - University of Karachi</li>
+          <li>Ordinary Differential Equations (411SE) - University of Karachi</li>
+          <li>Probability &amp; Statistics (417SE) - University of Karachi</li>
+          <li>Discrete Mathematics (412SE) - University of Karachi</li>
+          <li>Numerical Analysis (511SE) - University of Karachi</li>
+          <li>Operation Research (602SE) - University of Karachi</li>
+          <li>Data Structures (405SE) - University of Karachi</li>
+          <li>Automata Theory (413SE) - University of Karachi</li>
+          <li>Compiler Construction (501SE) - University of Karachi</li>
+          <li>AI in Software Engineering (509SE) - University of Karachi</li>
+          <li>Data Warehousing and Data Mining (514SE) - University of Karachi</li>
+          <li>Distributed Computing (601SE) - University of Karachi</li>
+        </ul>
+      </div>
+
+      <!-- Certifications Section -->
+      <div id="certifications" class="content-region">
+        <h2>Certifications and Courses</h2>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Certified Artificial Intelligence Developer - Presidential Initiative for Artificial Intelligence and Computing (PIAIC), Jan 2023</li>
+          <li>ServiceNow Certified System Administrator - ServiceNow, Jun 2022</li>
+          <li>IELTS Academic, overall band 6.5 - Aug 2026</li>
+        </ul>
+
+        <h3>Online Courses Completed</h3>
+        <ul>
+          <li><a href="https://www.edx.org/learn/computer-science/rwth-aachen-university-reinforcement-learning-2" target="_blank">Reinforcement Learning - RWTH Aachen University (edX)</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8" target="_blank">CS236: Deep Generative Models - Stanford University</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dYmJd_fJLW0&amp;list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36" target="_blank">CS330: Deep Multi-Task and Meta Learning - Stanford University</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r" target="_blank">EECS 498-007: Deep Learning for Computer Vision - University of Michigan</a></li>
+          <li><a href="https://youtu.be/oXlwWbU8l2o" target="_blank">OpenCV Course: Full Tutorial with Python - freeCodeCamp</a></li>
         </ul>
       </div>
 
@@ -556,28 +790,43 @@
   </footer>
 
   <script>
-    // Show one section at a time
+    // Show one section at a time and highlight its menu link
     function showContent(sectionId) {
+      var target = document.getElementById(sectionId);
+      if (!target) {
+        return;
+      }
       document.querySelectorAll('.content-region').forEach(function (region) {
         region.classList.remove('active');
       });
-      var target = document.getElementById(sectionId);
-      if (target) {
-        target.classList.add('active');
-      }
+      target.classList.add('active');
+      document.querySelectorAll('.main-menu a[data-section]').forEach(function (link) {
+        link.classList.toggle('current', link.getAttribute('data-section') === sectionId);
+      });
     }
 
-    // Open the section named in the address bar (e.g. .../#work)
-    window.addEventListener('load', function () {
-      var id = window.location.hash.replace('#', '');
-      if (id && document.getElementById(id)) {
-        showContent(id);
-      }
+    // Any link with data-section opens that section (menu, home page buttons, inline links)
+    document.querySelectorAll('a[data-section]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        showContent(link.getAttribute('data-section'));
+        window.scrollTo(0, 0);
+      });
     });
+
+    // Open the section named in the address bar (e.g. .../#work) and follow back/forward
+    function openFromHash() {
+      var id = window.location.hash.replace('#', '') || 'home';
+      showContent(document.getElementById(id) ? id : 'home');
+    }
+    window.addEventListener('load', openFromHash);
+    window.addEventListener('hashchange', openFromHash);
 
     // Click a work experience card to show or hide its details
     document.querySelectorAll('.jobs > li').forEach(function (item) {
-      item.addEventListener('click', function () {
+      item.addEventListener('click', function (event) {
+        if (event.target.closest('a')) {
+          return;
+        }
         var description = item.querySelector('.description');
         description.style.display = (description.style.display === 'block') ? 'none' : 'block';
       });
