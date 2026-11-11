@@ -605,6 +605,25 @@
           </li>
         </ul>
 
+        <h3>Biomedical AI: Retina and Neuroscience</h3>
+        <ul class="projects">
+          <li>
+            <strong>Project Title:</strong> Where Does the Retina Show Its Age? Interpretable Retinal Age Prediction and the Retinal Age Gap <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Trained two models to predict a person's age from a colour fundus photograph, using only patients whose both eyes were healthy in ODIR-5K (999 patients, split by patient): a ResNet-50 explained with Grad-CAM, and an inherently interpretable evidence-map regressor whose age map shows how many years each retinal region adds to the prediction. Both reached a mean absolute error of about 6.8 years on 200 held-out healthy patients (r = 0.59). After correcting the retinal age gap for regression to the mean, age and sex, eyes with cataract, AMD, drusen and glaucoma looked 1.9 to 4.4 years older than healthy eyes. In diabetic retinopathy the gap grew with severity, from about -1 year in eyes without DR to about +4.3 to +4.6 years in proliferative DR, while the gap for hypertensive retinopathy was not significant. Split into automatically found anatomical regions, both models looked at the optic disc and macula much more than their size suggests, and the macula mattered more in younger people. A deletion test showed that both explanations are faithful: blurring the 5% most-attributed patches changed the evidence model's prediction by 4.1 years, against 1.2 years for random patches. This is a pilot on one dataset and one seed, and ODIR disease labels are eye findings, not confirmed systemic diagnoses.<br>
+            <strong>Tools:</strong> Python, PyTorch, ResNet-50, Grad-CAM, Evidence-Map Model, ODIR-5K, Mixed-Precision Training<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Region-Resolved-Interpretable-Retinal-Age-Estimation-from-Fundus-Photographs" target="_blank">GitHub</a>
+          </li>
+
+          <li>
+            <strong>Project Title:</strong> Few-Label Identification of Mouse Retinal Ganglion Cell Types with Contrastive Learning <span class="date">(2026)</span><br><br>
+            <strong>Description:</strong><br>
+            Tested whether a representation learned without labels helps to identify mouse retinal ganglion cell types when only a few cells are labelled. Used the public All-GCL dataset (two-photon calcium responses to a chirp and a moving bar); after quality control this gave 30,888 cells in 69 functional groups, and all cells from 2 of 8 experimenters were held out so that test cells came from recordings the models never saw. Trained a two-branch 1D-CNN encoder (chirp + moving bar) with a SimCLR-style contrastive loss on all training cells without labels, and compared it with raw traces, PCA and a supervised CNN at 1, 5, 10 and 100% labels (3 seeds each). With 1% labels (290 cells), the contrastive embedding with logistic regression gave the best balanced accuracy on the unseen recordings (12.7% vs 11.8% for the best baseline; chance 1.4%), but from 5% labels on the supervised CNN was better (20.0% at 5%, 23.0% at 10%). The embedding did not remove batch effects: the recording group could be predicted from it as well as from the raw traces (62.6% vs 62.8%). The group labels come from the dataset's own classifier, so accuracy here means agreement with that classifier.<br>
+            <strong>Tools:</strong> Python, PyTorch, 1D-CNN, Contrastive Learning (SimCLR-style), PCA, scikit-learn, t-SNE, All-GCL (Hugging Face)<br>
+            <strong>Code:</strong> <a href="https://github.com/SadafZehra/Few-Label-Identification-of-Mouse-Retinal-Ganglion-Cell-Types-with-Contrastive-Learning" target="_blank">GitHub</a>
+          </li>
+        </ul>
+
         <h3>Professional Projects</h3>
         <ul class="projects">
           <li>
@@ -809,8 +828,14 @@
           <li>IELTS Academic, overall band 6.5 - Aug 2026</li>
         </ul>
 
-        <h3>Online Courses Completed</h3>
+        <h3>Online Courses</h3>
         <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16" target="_blank">CS231n: Deep Learning for Computer Vision (2025) - Stanford University</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60B0PQXVQyGNdCyCTDU1Q5j" target="_blank">6.S897: Machine Learning for Healthcare - MIT</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLtoSVSQ2XzyAJAGzaHF0nUIkav0BnxhrJ" target="_blank">MONAI Bootcamp 2023 - Project MONAI</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D" target="_blank">CS224N: Natural Language Processing with Deep Learning - Stanford University</a></li>
+          <li><a href="https://cmu-mmml.github.io/fall2022" target="_blank">11-777: Multimodal Machine Learning - Carnegie Mellon University</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM" target="_blank">CS25: Transformers United - Stanford University</a></li>
           <li><a href="https://www.edx.org/learn/computer-science/rwth-aachen-university-reinforcement-learning-2" target="_blank">Reinforcement Learning - RWTH Aachen University (edX)</a></li>
           <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8" target="_blank">CS236: Deep Generative Models - Stanford University</a></li>
           <li><a href="https://www.youtube.com/watch?v=dYmJd_fJLW0&amp;list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36" target="_blank">CS330: Deep Multi-Task and Meta Learning - Stanford University</a></li>
